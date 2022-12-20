@@ -1,0 +1,8 @@
+/* Estilos globales */
+@import '/src/config-scss/variables.scss';
+@import '/src/config-scss/reset.scss';
+@import '/src/config-scss/rem-calc.scss';
+
+html {
+    font-family: 'PT Sans', sans-serif;
+}
