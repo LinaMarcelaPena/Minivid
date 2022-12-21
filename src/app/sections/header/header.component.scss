@@ -1,0 +1,76 @@
+:host
+{
+    #container 
+    {
+        width: 100%;
+        display: inline-block;
+    }
+      /** HEADER */
+      
+      /** NAVIGATION BAR */
+      nav 
+    {
+        overflow: hidden;
+        background-color: var(--havelockBlue);
+        top: 0;
+        width: 100%;
+
+        .logo {
+            text-decoration: none;
+            width: 6%;
+            display: flex;
+            float: left;
+        }
+
+        ul 
+        {
+            text-align: right; 
+            list-style-type: none;
+            list-style-type: none;
+            padding: 30px;
+            display: flex;
+            justify-content: end;
+          li 
+          {
+            display: inline-flex;   
+            font-size: 17px;
+            color: white;
+            align-items: center;
+            justify-content: center;
+               a 
+               {
+                      text-decoration: none;
+                      padding: 14px;
+                     &:hover 
+                    {
+                       background-color: #111;
+                    }
+                }
+           }
+
+           .menuHam{
+            visibility: hidden;
+           }
+        }
+    }   
+    @media only screen and (min-width: 375px) and (max-width: 998px) 
+    {
+
+
+        :host
+        {
+            .logo {
+                text-decoration: none;
+                width: 21%;
+                display: flex;
+                float: left;
+            }
+            ul{
+                visibility: hidden;
+            }
+
+        }
+        
+        
+    } 
+}
