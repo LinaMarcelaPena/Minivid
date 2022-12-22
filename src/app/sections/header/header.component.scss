@@ -1,15 +1,13 @@
-:host
-{
-    #container 
-    {
+:host {
+    #container {
         width: 100%;
         display: inline-block;
     }
-      /** HEADER */
-      
-      /** NAVIGATION BAR */
-      nav 
-    {
+
+    /** HEADER */
+
+    /** NAVIGATION BAR */
+    nav {
         overflow: hidden;
         background-color: var(--havelockBlue);
         top: 0;
@@ -22,55 +20,33 @@
             float: left;
         }
 
-        ul 
-        {
-            text-align: right; 
-            list-style-type: none;
-            list-style-type: none;
-            padding: 30px;
+        ul {
             display: flex;
             justify-content: end;
-          li 
-          {
-            display: inline-flex;   
-            font-size: 17px;
-            color: white;
-            align-items: center;
-            justify-content: center;
-               a 
-               {
-                      text-decoration: none;
-                      padding: 14px;
-                     &:hover 
-                    {
-                       background-color: #111;
+            margin-top: 2%;
+
+            li {
+                display: inline-flex;
+                font-size: 17px;
+                color: white;
+                align-items: center;
+                justify-content: center;
+
+                a {
+                    text-decoration: none;
+                    padding: 14px;
+
+                    &:hover {
+                        background-color: #153F59;
+                        color: white;
+                        transform: translateY(-10px);
+                        box-shadow: 0px 44px 35px 0px rgb(150, 112, 224);
                     }
                 }
-           }
 
-           .menuHam{
-            visibility: hidden;
-           }
-        }
-    }   
-    @media only screen and (min-width: 375px) and (max-width: 998px) 
-    {
-
-
-        :host
-        {
-            .logo {
-                text-decoration: none;
-                width: 21%;
-                display: flex;
-                float: left;
             }
-            ul{
-                visibility: hidden;
-            }
-
         }
-        
-        
-    } 
+
+       
+    }
 }
