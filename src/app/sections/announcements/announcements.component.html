@@ -1,1 +1,29 @@
-<p>announcements works!</p>
+<!-- contenedor general -->
+<div class="general-carousel" [ngStyle]="{'min-height': finalHeight}">
+    <!-- Botones -->
+    <div class="carousel__btns">
+        <i class="fa fa-chevron-circle-left" (click)="setBack()"></i>
+        <i class="fa fa-chevron-circle-right" (click)="setNext()"></i>
+    </div>
+    <!-- contenedor de las imagenes y lo que se quiere agregar al carousel -->
+    <div class="carousel__content">
+        <!-- seccion no se coloca div por que el div agrega informacion en este caso 
+            se busca una seccion que se pueda manipula-->
+        <ng-container *ngFor="let section of items;">
+            <div class="carousel__content-items" [ngStyle]="{'background-image': 'url(' + section.image + ')', 'margin-left': section.marginLeft + '%' }">
+
+            </div>
+        </ng-container>
+    </div>
+    <!-- contenedor princial de botones para navegar por las imagenes que se mostraran en la parte inferior -->
+    <div class="carousel__steps">
+        <!-- *ngFor="let item of items dependiendo de los items que tengamos nos muestra los steps 
+            en la parte inferior de la imagen y con (click)="setCurrentPosition(item.id) le indicamos
+            que al dar clic nos muestre la posicion solicitada por medio del id que reciba -->
+        <div class="carousel__steps-step 
+                    carousel__steps-step-{{currentPosition === item.id ? 'active': ''}}" 
+                    *ngFor="let item of items" (click)="setCurrentPosition(item.id)">
+
+        </div>
+    </div>
+</div>
