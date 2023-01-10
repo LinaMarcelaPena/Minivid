@@ -4,6 +4,7 @@ export interface ICarouselItem {
     //id es necesario
     id:number;
     //si las imagenes del carousel llevan titulo y subtitulo se agregaran las propiedades correspondientes
+    //servira si queremos agregar un link a la imagen 
     link?: string;
     //imagenes del carousel
     image: string;
