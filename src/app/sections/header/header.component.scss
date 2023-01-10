@@ -33,7 +33,7 @@
 
     @mixin large {
         @media only screen and (min-width: 993px) and (max-width: 2000px) {
-            @content;
+            @content; 
         }
     }
 
@@ -98,7 +98,7 @@
 
         .menuHam {
             visibility: visible;
-
+            z-index: 1;
             @include desktop {
                 visibility: hidden;
             }
@@ -129,7 +129,7 @@
         }
 
         %menu {
-            position: fixed;
+            position: absolute;
             width: 50px;
             height: 50px;
             font-size: 30px;
@@ -137,7 +137,7 @@
             border-radius: 100%;
             right: 7px;
             top: 22px;
-
+            z-index: 1; 
         }
 
         //circulo del menu
@@ -150,6 +150,7 @@
             top: 29px;
             transform: translate3d(53%, -29%, 0);
             transform-origin: center center;
+            z-index: 1;
 
             //tamaño del circulo contenedor del menu
             &.fs {
@@ -180,6 +181,7 @@
             cursor: pointer;
             transition: .4s;
             transform-origin: center;
+            z-index: 1;
 
             &.fs {
                 transform: rotate(-180deg) translateY(10px);
@@ -189,6 +191,7 @@
         .menu-items {
             position: absolute;
             font-weight: bold;
+            z-index: 1;
 
             @include mobileSuperSmall {
                 font-size: 13px;
@@ -209,7 +212,7 @@
 
             @include mobileSuperSmall {
                 margin-top: -9rem;
-                position: fixed;
+                position: absolute;
             }
 
             @include mobileSmall {
