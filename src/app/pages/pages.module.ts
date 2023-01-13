@@ -36,6 +36,13 @@ import { ProductsToolsComponent } from './products-tools/products-tools.componen
     SectionsModule,
     SectionsProductsModule,
     SectionsShoppingModule
+  ],
+  exports: [
+    CommonModule,
+    RoutingModule,
+    SectionsModule,
+    SectionsProductsModule,
+    SectionsShoppingModule
   ]
 })
 export class PagesModule { }

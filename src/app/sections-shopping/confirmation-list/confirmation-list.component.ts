@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ConfirmationListComponent {
 
+
+  constructor (){
+
+    const nameProduct = document.querySelector('#nameProduct')
+    console.log(nameProduct);
+  }
+
+
 }

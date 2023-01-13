@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 //modules
 import { AppRoutingModule } from './app-routing.module';
 import { PagesModule } from './pages/pages.module';
+import { SectionsModule } from './sections/sections.module';
+import { SectionsShoppingModule } from './sections-shopping/sections-shopping.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,16 @@ import { PagesModule } from './pages/pages.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PagesModule
+    PagesModule,
+    SectionsModule,
+    SectionsShoppingModule
+  ],
+  exports: [
+    BrowserModule,
+    AppRoutingModule,
+    PagesModule,
+    SectionsModule,
+    SectionsShoppingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
